@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator-header">
+            <h2>Tax Calculator</h2>
+            <p class="developer">Developed by Muneeb</p>
+        </div>
+
+        <div class="calculator-body">
+            <div class="input-section">
+                <label for="income1">Income 1 (₨):</label>
+                <input type="number" id="income1" placeholder="Enter income" class="input-box" />
+                <label for="quantity1">Quantity 1:</label>
+                <input type="number" id="quantity1" placeholder="Enter quantity" class="input-box" />
+
+                <label for="income2">Income 2 (₨):</label>
+                <input type="number" id="income2" placeholder="Enter income" class="input-box" />
+                <label for="quantity2">Quantity 2:</label>
+                <input type="number" id="quantity2" placeholder="Enter quantity" class="input-box" />
+
+                <label for="income3">Income 3 (₨):</label>
+                <input type="number" id="income3" placeholder="Enter income" class="input-box" />
+                <label for="quantity3">Quantity 3:</label>
+                <input type="number" id="quantity3" placeholder="Enter quantity" class="input-box" />
+            </div>
+
+            <label for="tax-rate">Tax Rate (%):</label>
+            <select id="tax-rate" class="input-box">
+                <option value="5">5%</option>
+                <option value="10">10%</option>
+                <option value="15">15%</option>
+                <option value="20">20%</option>
+                <option value="25">25%</option>
+                <option value="30">30%</option>
+            </select>
+
+            <label for="discount">Discount (%):</label>
+            <input type="number" id="discount" placeholder="Enter discount" class="input-box" />
+
+            <label for="delivery">Delivery Charge (₨):</label>
+            <input type="number" id="delivery" placeholder="Enter delivery charge" class="input-box" />
+
+            <button onclick="calculateTax()" class="calc-btn">Calculate</button>
+            <button onclick="clearFields()" class="clear-btn">Clear</button>
+
+            <div class="result">
+                <h3>Final Amount: ₨<span id="final-amount">0</span></h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
